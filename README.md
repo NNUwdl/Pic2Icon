@@ -11,6 +11,8 @@ It will try to open the output_icon after conversion.
 
 The output icon will be put in the Output_Icon folder of the input file directory.
 
+The resolution of the icon output from this software is 2048x2048, so the clarity of the output file will be much higher than that of the website conversion.Because the output icon is A four-channel RGBA image, so it support for the four-channel PNG image input, and the output will retain the PNG's 'A' channel, as is not a square image, the solution of the program is to complete the square, the added pixel whose four-channel set to \[0 0 0 0](transparent).
+
 This software is mainly made by using model pillow, opencv and numpy.(this environment is not required on your computer)
 
 There are still some problems to be solved. For example, using Python window modules will make the user interface more user-friendly. For example, Image re-sampling into 2048 x2048 cv2.resize function is used. The resize function expand the array. I found that the method can raise the sharpness of the picture, because it will not change an array by the values, such as resampling points located in the junction of two colors in the artwork, that it should take another color similar to both color, but the resize function has failed to do so.
